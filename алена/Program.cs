@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace проба_2
+namespace алена
 {
     class Program
     {
@@ -16,11 +16,11 @@ namespace проба_2
             string[] split = null;
             while (true)
             {
-                Console.WriteLine("Введите слова");
-                string str = Console.ReadLine();
+                Console.WriteLine("Введите два слова");
+                string str = Console.ReadLine().ToUpper(); //преобразование всех букв в большой регистр
 
                 split = str.Split(' ');
-                
+                if (split.Length == 2)
                 {
                     break;
                 }
@@ -44,11 +44,11 @@ namespace проба_2
 
             if (s == j)
             {
-                Console.WriteLine("Первая буква первого слова и последняя буква второго слова совпадают! :)");
+                Console.WriteLine("истина");
             }
             else
             {
-                Console.WriteLine("Первая буква первого слова и последняя буква второго слова не совпадают! :( ");
+                Console.WriteLine("ложь");
             }
 
             Console.ReadLine();
