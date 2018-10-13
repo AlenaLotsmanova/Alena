@@ -4,54 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace алена
+namespace TZ
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string s = "0";
-            string j = "0";
-            int count = 0;
             string[] split = null;
             while (true)
             {
                 Console.WriteLine("Введите два слова");
                 string str = Console.ReadLine().ToUpper(); //преобразование всех букв в большой регистр
-
                 split = str.Split(' ');
                 if (split.Length == 2)
                 {
                     break;
                 }
             }
+            string t = split[1];
+            string s = Convert.ToString(split[0][0]);
+            string j = Convert.ToString(split[1] [t.Length - 1]); 
 
-            foreach (var t in split)
-            {
-                //Console.WriteLine("{0}", t);
-
-                if (count == 0)
-                    s = Convert.ToString(t[0]);
-                if (count == 1)
-                {
-                    int u = t.Length;
-                    j = Convert.ToString(t[u - 1]);
-                }
-
-
-                count++;
+                if (s == j)
+                {Console.WriteLine("истина");}
+                else
+                { Console.WriteLine("ложь");}
+                { Console.ReadLine();}
             }
-
-            if (s == j)
-            {
-                Console.WriteLine("истина");
-            }
-            else
-            {
-                Console.WriteLine("ложь");
-            }
-
-            Console.ReadLine();
         }
     }
-}
+
+            
+       
+
